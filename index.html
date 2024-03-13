@@ -4,50 +4,180 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technical Documentation</title>
+    <link rel="stylesheet" href="documentation.css">
 </head>
 <body>
     <nav id="navbar">
         <header>Python Documentation</header>
         <ul>
             <li>
-                <a href="#Input_and_Output" class="nav-link">Input and Output</a>
+                <a href="#Introduction" class="nav-link" class="intro">Introduction</a>
             </li>     
             <li>
-                <a href="#Variables_and_Data_Types" class="nav-link">Variables and Data Types</a>
+                <a href="#Building_blocks" class="nav-link">Building Blocks</a>
             </li>     
             <li>
-                <a href="#Operators" class="nav-link">Operators</a>
+                <a href="#Control_flow" class="nav-link">Control Flow</a>
             </li>     
             <li>
-                <a href="#Conditional_Statements" class="nav-link">Conditional Statements</a>
+                <a href="#Data_Structures" class="nav-link">Data Structures</a>
             </li>     
             <li>
-                <a href="#Loops" class="nav-link">Loops</a>
+                <a href="#Functions" class="nav-link">Functions</a>
             </li>     
             <li>
-                <a href="#More" class="nav-link">More</a>
+                <a href="#Help_and_more" class="nav-link">Help and More</a>
             </li>     
         </ul>
+        <p class="made">Created by: Ralph Vincent Rodriguez</p>
     </nav>
     <main id="main-doc">
-        <section class="main-section">
-            <header>Input and Output</header>
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <h1>Introduction to Python</h1>
+            <p>Python is a powerful and versatile programming language widely used for various tasks, including:</p>
+            <ul>
+                <li>Web Development: Building websites and applications.</li>
+                <li>Data Science and Machine Learning: Analyzing data, extracting insights, and creating intelligent systems.</li>
+                <li>Automation: Automating repetitive tasks, improving efficiency.</li>
+                <li>Scripting: Creating small programs to perform specific actions.</li>
+            </ul>
+            <p>Why Choose Python?
+                Python offers several advantages that make it an excellent choice for beginners and experienced programmers alike:</p>
+                <ul>
+                    <li>Easy to Learn: Python's syntax is clear and readable, resembling natural language, making it easier to pick up compared to some other languages.</li>
+                    <li>Extensive Standard Library: Python comes with a rich library of built-in modules and functions for various functionalities, reducing the need to write code from scratch.</li>
+                    <li>Large and Active Community: Python boasts a vast and supportive community that provides extensive learning resources, tutorials, and forums for assistance.</li>
+                    <li>Wide Range of Powerful Libraries: Beyond the standard library, Python offers a plethora of powerful third-party libraries specializing in specific domains like data science (NumPy, Pandas), scientific computing (SciPy), and machine learning (Scikit-learn).</li>
+                </ul>
         </section>
-        <section class="main-section">
-            <header>Variables and Data Types</header>
+        <section class="main-section" id="Building_blocks">
+            <header>Building Blocks</header>
+            <H1>Variables and Data Types:</H1>
+            <P>In Python, variables store information like numbers or text. You assign values to variables using the = operator.</P>
+            <p>Python offers various data types to represent different kinds of information:</p>
+            <ul>
+                <li>Integers: Whole numbers (e.g., 10, -5).</li>
+                <li>Floats: Numbers with decimals (e.g., 3.14, -2.5).</li>
+                <li>Strings: Text data enclosed in quotes (e.g., "Hello, world!", 'This is a string').</li>
+                <li>Booleans: Represent True or False values.</li>
+            </ul>
+            <pre>
+                <code># Assign an integer (whole number) to a variable
+                    age = 25
+                    
+                    # Assign a decimal number (float) to a variable
+                    pi = 3.14159
+                    
+                    # Assign text data (string) to a variable
+                    name = "Alice"
+                    
+                    # Assign a boolean value (True or False)
+                    is_sunny = True</code>
+            </pre>
+            <h1>Operators</h1>
+            <p>Operators perform calculations or comparisons on data.</p>
+            <ul>
+                <li>Arithmetic operators: +, -, *, / for basic arithmetic.</li>
+                <li>Comparison operators: == (equal to), != (not equal to), < (less than), > (greater than), <= (less than or equal to), >= (greater than or equal to).</li>
+                <li>Logical operators: and, or, not for combining conditions.</li>
+            </ul>
+            <p></p>
+            <p></p>
+
+            <pre>
+                <code># Arithmetic operations
+                    sum = 10 + 5  # Addition
+                    difference = 15 - 3  # Subtraction
+                    product = 4 * 2  # Multiplication
+                    division = 10 / 2  # Division (returns a float)
+                    
+                    # Comparison operators
+                    is_equal = 10 == 10  # Equal to
+                    is_greater_than = 7 > 5  # Greater than
+                    
+                    # Logical operators (combine conditions)
+                    is_adult = age >= 18 and is_sunny  # Using "and"</code>
+            </pre>
         </section>
-        <section class="main-section">
-            <header>Operators</header>
+        <section class="main-section" id="Control_flow">
+            <header>Control Flow</header>
+            <h1>Conditional Statements</h1>
+            <ul>
+                <li>Make decisions based on conditions using if, elif, and else.</li>
+                <li>if checks a condition. If true, the following code executes.</li>
+                <li>elif allows checking multiple conditions sequentially.</li>
+                <li>else executes code if none of the above conditions are true.</li>
+            </ul>
+            <pre>
+                <code>
+                    age = 12
+
+                    # Check if age is greater than or equal to 18 (adult)
+                    if age >= 18:
+                        print("You are an adult.")
+                    else:
+                        print("You are not an adult.")</code>
+            </pre>
         </section>
-        <section class="main-section">
-            <header>Conditional Statements</header>
+        <section class="main-section" id="Data_Structures">
+            <header>Data Structures</header>
+            <p class="sub">Strings:</p>
+            <ul>
+                <li>Hold text data. Access individual characters and combine strings with +.</li>
+            </ul>
+            <pre>
+                <code># Accessing individual characters (indexing starts from 0)
+                    first_letter = name[0]  # Accesses the first character ("A")
+                    
+                    # Combining strings
+                    greeting = "Hello, " + name + "!"
+                    print(greeting)</code>
+            </pre>
+            <p class="sub">Lists:</p>
+            <ul>
+                <li>Ordered collections of items in square brackets [].</li>
+                <li>Store various data types within a list.</li>
+                <li>Access elements by index (position) starting from 0.</li>
+            </ul>
+            <pre>
+                <code># Create a list of numbers
+                    numbers = [1, 2, 3, 4, 5]
+                    
+                    # Access the third element (index 2)
+                    third_number = numbers[2]  # Value is 3
+                    
+                    # Add an element to the end of the list
+                    numbers.append(6)</code>
+            </pre>
         </section>
-        <section class="main-section">
-            <header>Loops</header>
+        <section class="main-section" id="Functions">
+            <header>Functions</header>
+            <ul>
+                <li>Reusable code blocks: Defined with def to perform specific tasks.</li>
+                <li>Arguments: You can provide inputs to functions.</li>
+                <li>Return Values: Functions can return outputs for further use.</li>
+            </ul>
+            <pre>
+                <code>def greet(name):
+                    """This function prints a greeting message."""
+                    print("Hello,", name)
+                
+                # Call the function with an argument
+                greet("Bob")</code>
+            </pre>
         </section>
-        <section class="main-section">
-            <header>More</header>
+        <section class="main-section" id="Help_and_more">
+            <header>Help and More</header>
+            <p class="sub">Next Steps:</p>
+            <ul>
+                <li>Built-in Help: Access help using help().</li>
+                <li>Learning Resources: Explore online tutorials, documentation, and forums.</li>
+            </ul>
+            <p>Remember: This is just the beginning! As you explore further, you'll unlock Python's potential for web development, data analysis, automation, and much more.</p>
+            <a href="https://docs.python.org/3/" class="link-python">FULL DOCUMENTATION HERE</a>
         </section>
+
     </main>
 </body>
 </html>
